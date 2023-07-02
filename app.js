@@ -37,7 +37,7 @@ app.post("/", function(req,res){
 
     const options={
         method:"POST",
-        auth:"Ashutosh:${process.env.APIKEY}"
+        auth:"Ashutosh:process.env.APIKEY"
     }
 
     const request=https.request(url, options,function(response){
