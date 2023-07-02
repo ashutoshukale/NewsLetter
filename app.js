@@ -35,12 +35,12 @@ app.post("/", function(req,res){
     
     const url="https://us8.api.mailchimp.com/3.0/lists/d3c9528e9b";
 
-    const options={
-        method:"POST",
-        auth:"Ashutosh:process.env.APIKEY"
-    }
+    // const options={
+    //     method:"POST",
+    //     auth:"Ashutosh:process.env.APIKEY"
+    // }
 
-    const request=https.request(url, options,function(response){
+    const request=https.request(url,function(response){
         
         if(response.statusCode==200){
             res.sendFile(__dirname+"/success.html");
